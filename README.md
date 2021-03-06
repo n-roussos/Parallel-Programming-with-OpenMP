@@ -68,4 +68,4 @@ The neural network is a fully-connected network consisting of 2 layers with 100 
 
 ### Author
 Nick Roussos (Dipl. Eng. Electrical and Computer Engineering Department, Univ. of Patras, Greece)
-  - Email: nroussos97 [at] gmail.co
+  - Email: nroussos97 [at] gmail.com
