@@ -4,7 +4,7 @@ This repository lists 4 problems solved using C. Each problem has its own serial
 The source code of this repository was developed for the "Parallel Programming for Machine Learning Problems" course conducted at the Department of Electrical and Computer Engineering, University of Patras, Greece.
 
 ## The repository outline is as follows:
-#### 1. **[K-means](https://en.wikipedia.org/wiki/K-means_clustering) serial implementation**
+### 1. **[K-means](https://en.wikipedia.org/wiki/K-means_clustering) serial implementation**
 ##### The algorithm
 - **Step 0:** Create N random vectors: Vec[N][Nv].
 - **Step 1:** Initialiaze the centers. Choose Nc unique vectors from Vec: Center[Nc][Nv].
@@ -17,13 +17,13 @@ The source code of this repository was developed for the "Parallel Programming f
    - *Version 5:* First working version. Global version uses global arrays.
    - *Version 6:* Elimination of printf calls.
    - *Version 7:* Added [SIMD](https://en.wikipedia.org/wiki/SIMD) (vector processing) directives.
-#### 2. **K-means with OpenMP:** A parallel implementation of the K-Means clustering algorithm
+### 2. **K-means with OpenMP:** A parallel implementation of the K-Means clustering algorithm
 ##### Versions
    - *Version 1:* Initial serial version.
    - *Version 2:* Added "omp parallel for" pragmas.
    - *Version 3:* Added "schedule" pragma.
    - *Version 4:* Added SIMD (vector processing), compiled with -O3.
-#### 3. **[Travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem)**
+### 3. **[Travelling salesman problem](https://en.wikipedia.org/wiki/Travelling_salesman_problem)**
 ##### Algorithm #1: Random search
 - **Step 0:** Define a random route.
 - **Step 1:** Calculate the total distance: tot_dist.
@@ -44,7 +44,7 @@ This algorithm is the same as Algorithm #2a except for:
 - *Version 3:* Serial implementation of Algorithm #2a.
 - *Version 4:* Serial implementation of Algorithm #2b.
 - *Version 5:* Parallel implementation of Algorithm #2b.
-#### 4. **Neural networks** 
+### 4. **Neural networks** 
 ##### Neural network structure
 The neural network is a fully-connected network consisting of 2 layers with 100 and 10 neurons, respectively. The input vector holds 12 values. The weights are stored in WL1[100][12+1] (+1 is for the bias) and WL2[10][100+1] for layer 1 and 2, respectively. The internal states of the neurons are stored in DL1[100] for layer 1 and DL2[10] for layer 2, whereas their corresponding outputs in OL1[100] and OL2[10].
 ##### Versions
@@ -52,7 +52,7 @@ The neural network is a fully-connected network consisting of 2 layers with 100 
    - *Version 2:* Serial implementation of the [error back-propagation](https://en.wikipedia.org/wiki/Backpropagation) algorithm for training the neural net.
    - *Version 3:* Parallel implementation of the error back-propagation algorithm.
    - *Version 4:* Added support to train the neural network using the  [Fashion MNIST](https://www.kaggle.com/zalando-research/fashionmnist) dataset and calculate its accuracy.
-#### 5. **[N queens problem](https://en.wikipedia.org/wiki/Eight_queens_puzzle)** 
+### 5. **[N queens problem](https://en.wikipedia.org/wiki/Eight_queens_puzzle)** 
 ##### The algorithm
 - **Step 0:** Place a queen to (1,1), first row and first column, that is.
 - **Step 1:** Place the next queen to the next column without being neither diagonally nor on the same row with another queen.
