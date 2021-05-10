@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-#define N 8
+#define N 28
 
 
 int ROWS_PLACED[N];	//only rows are needed, cols are incrementing
@@ -68,7 +68,7 @@ void board_init(){
 //calculates valid rows of current column
 void calc_valid(int col){
 	for(int row=0;row<N;row++){
-		VALID_ROWS[col][row] = isvalid(row, col);
+		VALID_ROWS[row][col] = isvalid(row, col);
 	}
 }
 
@@ -92,7 +92,7 @@ int get_next_valid(int col){
 	//if old_position=-1 (not placed) start from 0
 	//if old position=N-1 (last valid) skip loop
 	for(int i=old_position+1;i<N;i++){
-		if(VALID_ROWS[col][i]){
+		if(VALID_ROWS[i][col]){
 			return i;
 		}
 	}
